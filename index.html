@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Game</title>
-</head>
-<body>
+    <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script type="text/javascript"></script>
+    <body id = "background">
     <div id = "greeting">
         <h1>The Crystal Counter</h1>
     </div>
-    <div id = "instrctions">
-        <h2>Instructions</h2>
-        <ol>
+    <div id = "instructions">
+        <h2>Instructions:</h2>
+        <ol id = "list">
             <li>Click "Get Number!" for a random number.</li>
             <li>Each crystal has a hidden value. Click on each one until your number is equal to the random number</li>
             <li>Be careful though. If your total is greater than the random number you will lose.</li>
-            <li>Don't like your number? "Click Reroll!" for a new number.</li>
         </ol>
+        <h3 id = "number-to-guess">Number to Guess:</h3>
     </div>
     <div id = "options">
-        <button id = "b1">Get Number!</button>
-        <button id = "b2">Play again!</button>
-        <button id = "b3">Reroll Your Number!</button>
+        <button id = "button1" onclick = "numbertoguess(event, 'button1')" id = "button1">Get Number!</button>
+        
     </div>
-    <div id = "game">
-        <section id = "crystals">
-                <img src="assets/images/GreenCrystal.png">
-                <img src="assets/images/PurpleCrystal.png">
-                <img src="assets/images/RedCrystal.png">
-                <img src="assets/images/TurCrystal.png">
-        </section>
+    <div id = "crystals">
+        <img class = "crystals" onclick = "onCryst(event, 'image1')" id = "image1" src = "assets/images/crystal.jpeg">
+        <img class = "crystals" onclick = "onCryst(event, 'image2')" id = "image2" src = "assets/images/crystal.jpeg">
+        <img class = "crystals" onclick = "onCryst(event, 'image3')" id = "image3" src = "assets/images/crystal.jpeg">
+        <img class = "crystals" onclick = "onCryst(event, 'image4')" id = "image4" src = "assets/images/crystal.jpeg">
+    </div>
+    <div id = "footer">
     </div>
 </body>
 </html>
